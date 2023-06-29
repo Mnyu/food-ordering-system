@@ -13,7 +13,6 @@ import com.food.ordering.system.order.service.domain.valueobject.TrackingId;
 
 import java.util.List;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 public class Order extends AggregateRoot<OrderId> {
   private final CustomerId customerId;
@@ -70,6 +69,10 @@ public class Order extends AggregateRoot<OrderId> {
     return failureMessages;
   }
 
+  public static Builder builder() {
+    return new Builder();
+  }
+
   public static final class Builder {
     private OrderId orderId;
     private CustomerId customerId;
@@ -82,10 +85,6 @@ public class Order extends AggregateRoot<OrderId> {
     private List<String> failureMessages;
 
     private Builder() {
-    }
-
-    public static Builder builder() {
-      return new Builder();
     }
 
     public Builder id(OrderId val) {
