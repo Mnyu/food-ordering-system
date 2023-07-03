@@ -25,6 +25,8 @@ public class Order extends AggregateRoot<OrderId> {
   private OrderStatus orderStatus;
   private List<String> failureMessages;
 
+  public static final String FAILURE_MESSAGES_DELIMITER = ",";
+
   private Order(Builder builder) {
     super.setId(builder.orderId);
     customerId = builder.customerId;
@@ -87,7 +89,7 @@ public class Order extends AggregateRoot<OrderId> {
     private Builder() {
     }
 
-    public Builder id(OrderId val) {
+    public Builder orderId(OrderId val) {
       orderId = val;
       return this;
     }
