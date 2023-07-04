@@ -70,12 +70,12 @@
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>kafka-producer</artifactId>
-                <version>${project.version</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
                 <artifactId>kafka-consumer</artifactId>
-                <version>${project.version</version>
+                <version>${project.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.food.ordering.system</groupId>
